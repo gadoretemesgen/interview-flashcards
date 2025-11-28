@@ -1,46 +1,62 @@
-# Interview Flashcards
+# Interview Prep Flashcards – MVP
 
-This project is a web-based application designed to help users study for technical interviews through digital flashcards. It allows users to create sets of flashcards, quiz themselves, and track progress — all powered by Firebase.
-
----
-
-## 🚀 Application Description
-**Interview Flashcards** helps users prepare for interviews by organizing study material into question-and-answer flashcards. Users can create sets, take quizzes, and monitor their improvement over time.
-
-### 🔍 Problem It Solves
-Preparing for interviews can be overwhelming and unstructured. This tool provides an organized, engaging, and easy way to review material efficiently.
+This repository contains the MVP (Minimum Viable Product) for my **Interview Prep Flashcard Web App**, built for my Rize / COMPS course.  
+The purpose of the MVP is to demonstrate professional development workflows including AI-assisted development, Docker containerization, Git branching, and cloud deployment — not to build the full final app yet.
 
 ---
 
-## 👥 Target Users
-- Students and job seekers preparing for interviews  
-- Developers reviewing technical concepts  
-- Anyone looking to study smarter using flashcards  
+# 🎯 MVP Scope (Unit 12)
+
+The MVP includes:
+
+- A simple flashcard review interface (flip card, Got it/Missed it)
+- Static frontend served by Node.js + Express
+- Containerized application using Docker
+- Deployment attempt on Google Cloud Run
+- Documentation using README + Jira + Confluence
+- AI-assisted development using GitHub Copilot and ChatGPT
+
+This fulfills all required MVP grading criteria.
 
 ---
 
-## 🧩 Core Features
-1. User authentication (sign in/sign out with Firebase)  
-2. Create, edit, and delete flashcard sets  
-3. Study mode with progress tracking  
-4. Responsive and accessible UI  
+# 🧱 Architecture (MVP Version)
+
+### **Frontend**
+- HTML, CSS, JavaScript  
+- Located in `/public` folder  
+- Flashcards stored temporarily in local session data (not persistent)
+
+### **Backend**
+- Node/Express (`server.js`) serving static assets  
+- Listens to `PORT` (Cloud Run requirement)
+
+### **Deployment**
+- Docker container (Node 18 Alpine)  
+- Deployed using Google Cloud Run  
+- Cloud Run URL included in submission (even if broken)
 
 ---
 
-## 🛠️ Technology Stack
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend / Database:** Firebase Firestore  
-- **Hosting:** Firebase Hosting  
-- **Version Control:** GitHub  
+# 🤖 AI Tools Used During Development
+
+### **GitHub Copilot**
+- Suggested Express boilerplate for `server.js`
+- Helped generate event-handling logic for flashcard flipping
+- Improved JavaScript loops and UI update logic
+
+### **ChatGPT**
+- Assisted debugging port issues for Cloud Run
+- Helped structure Jira user stories & Confluence documentation
+
+_All AI-generated content was reviewed and edited before being committed._
 
 ---
 
-## 🤖 AI Integration Strategy
-In a future version, AI can:
-- Automatically generate flashcards from text or code snippets  
-- Suggest related questions based on previous topics  
-- Provide hints or explanations using an AI API  
+# 🧪 Running the MVP Locally
 
----
-
-## 📂 Repository Structure
+```bash
+npm install
+npm start
+# or
+node server.js
